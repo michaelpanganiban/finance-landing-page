@@ -10,19 +10,19 @@ import { constants } from '@/src/theme/enum/constants';
 export const HeaderDetails = () => {
     return (
         <Toolbar variant='dense'>
-          <Grid container columns={6} spacing={2}>
-            <Grid item xs={6} sm={3} md={3} lg={2}>
-              <Stack alignItems={{xs: 'center', sm: 'end', md: 'end', lg: 'end' }}>
-                <Typography style={{ fontSize: 'small' }} borderRight={{ xs: 'none', sm: '1px solid white' }}>
+          <Grid container columns={6} spacing={1} alignItems={'center'}>
+            <Grid item xs={6} sm={6} md={3} lg={2}>
+              <Stack alignItems={{xs: 'center', sm: 'center', md: 'end', lg: 'end' }}>
+                <Typography style={{ fontSize: 'small', borderSpacing: '0px 10px' }} borderRight={{ xs: 'none', sm: 'none', md: '1px solid #7194b7' }}>
                   <CallSharpIcon 
-                    style={{ fontSize: 'small'}} 
+                    style={{ fontSize: 'small'}}
                   /> &nbsp;
-                  Call us: {constants.CONTACT_NUMBER}
+                  Call us: {constants.CONTACT_NUMBER}&nbsp;&nbsp;
                 </Typography>
               </Stack>
             </Grid>
-            <Grid item xs={6} sm={3} md={3} lg={2}>
-              <Stack alignItems={{xs: 'center', sm: 'start', md: 'start', lg: 'start' }}>
+            <Grid item xs={6} sm={6} md={3} lg={2}>
+              <Stack alignItems={{xs: 'center', sm: 'center', md: 'start', lg: 'start' }}>
                 <Typography style={{ fontSize: 'small' }} >
                   <EmailSharpIcon 
                     style={{ fontSize: 'small' }} 
@@ -32,8 +32,8 @@ export const HeaderDetails = () => {
               </Stack>
             </Grid>
 
-            <Grid item xs={6} sm={3} md={3} lg={1}>
-              <Stack alignItems={{xs: 'center', sm: 'end', md: 'end', lg: 'end'}}>
+            <Grid item xs={6} sm={6} md={3} lg={1}>
+              <Stack alignItems={{xs: 'center', sm: 'center', md: 'end', lg: 'end'}}>
                 <Typography style={{ fontSize: 'small' }} >
                   <HelpSharpIcon 
                     style={{ fontSize: 'small' }} 
@@ -42,15 +42,15 @@ export const HeaderDetails = () => {
                 </Typography>
               </Stack>
             </Grid>
-            <Grid item xs={6} sm={3} md={3} lg={1}>
-              <Stack alignItems={{xs: 'center', sm: 'start', md: 'start', lg: 'start'}}>
+            <Grid item xs={6} sm={6} md={3} lg={1}>
+              <Stack alignItems={{xs: 'center', sm: 'center', md: 'start', lg: 'start'}}>
                 <Button 
                   sx={{ 
                     backgroundColor: Colors.SECONDARY, 
                     color: Colors.WHITE,
                     fontWeight: 'bolder',
                     borderRadius: 0,
-                    minHeight: '40px'
+                    minHeight: '47px'
                   }}
                   variant='outlined'
                 >

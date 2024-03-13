@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <Stack>
       <CssBaseline />
-      <HeaderBar sx={{ height: {xs: '25%', sm: '13%', md: '10%', lg: 'inherit'} }}>
+      <HeaderBar sx={{ padding: {xs: '4px', sm: '4px', md: '3px', lg: '0px'} }}>
         <HeaderDetails />
       </HeaderBar>
     </Stack>
