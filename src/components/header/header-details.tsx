@@ -32,7 +32,7 @@ export const HeaderDetails = () => {
               </Stack>
             </Grid>
 
-            <Grid item xs={6} sm={3} lg={1}>
+            <Grid item xs={6} sm={3} md={3} lg={1}>
               <Stack alignItems={{xs: 'center', sm: 'end', md: 'end', lg: 'end'}}>
                 <Typography style={{ fontSize: 'small' }} >
                   <HelpSharpIcon 
@@ -42,7 +42,7 @@ export const HeaderDetails = () => {
                 </Typography>
               </Stack>
             </Grid>
-            <Grid item xs={6} sm={3} lg={1}>
+            <Grid item xs={6} sm={3} md={3} lg={1}>
               <Stack alignItems={{xs: 'center', sm: 'start', md: 'start', lg: 'start'}}>
                 <Button 
                   sx={{ 
@@ -50,8 +50,9 @@ export const HeaderDetails = () => {
                     color: Colors.WHITE,
                     fontWeight: 'bolder',
                     borderRadius: 0,
-                    height: '40px',
+                    minHeight: '40px'
                   }}
+                  variant='outlined'
                 >
                   GET AN APPOINTMENT
                 </Button>

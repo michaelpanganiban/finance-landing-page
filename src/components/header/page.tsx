@@ -9,23 +9,12 @@ import { HeaderDetails } from './header-details';
 const HeaderBar = styled(AppBar, {
   name: 'HeaderComponent',
   slot: 'Root'
-})(({ theme }) => ({
-  [theme.breakpoints.down('xs')]: { 
-    height: '25%',
-  },
-  [theme.breakpoints.between('xs', 'sm')]: { 
-    height: '15%',
-  },
-
-  [theme.breakpoints.between('sm', 'lg')]: { 
-      height: '15%',
-  },
-}))
+})(() => ({}))
 export default function Header() {
   return (
     <Stack>
       <CssBaseline />
-      <HeaderBar>
+      <HeaderBar sx={{ height: {xs: '25%', sm: '13%', md: '10%', lg: 'inherit'} }}>
         <HeaderDetails />
       </HeaderBar>
     </Stack>
