@@ -3,8 +3,8 @@ import './globals.css'
 import React from 'react'
 import { Stack } from '@mui/material'
 import ThemeRegistry from '../components/theme/ThemeRegistry'
-import Head from 'next/head'
 import Header from '../components/header/page'
+import NavBar from '../components/navigation/page'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
@@ -20,11 +20,13 @@ export default function RootLayout({
     <html lang="en">
       <ThemeRegistry>
         <body>
-          <Stack>{children}</Stack>
-          <Header />  
+          <Stack>
+            {children}
+          </Stack>
+          <Header />
+          <NavBar />
         </body>
       </ThemeRegistry>
-
     </html>
   )
 }

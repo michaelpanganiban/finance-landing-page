@@ -2,17 +2,16 @@
 
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { NavDrawer } from './drawer';
-import { constants } from '../../../theme/enum/constants';
+import { Grid, Stack, styled } from '@mui/material';
+import { Colors } from '@/src/theme/enum/colors';
 
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Home', 'About', 'Services', 'Portfolio', 'Blogs', 'Contact'];
 
 export default function NavBar() {
 	const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -20,42 +19,65 @@ export default function NavBar() {
 		setMobileOpen((prevState) => !prevState);
 	};
 
+  const NavBar = styled(AppBar, {
+    name: 'NavBarComponent',
+    slot: 'Root'
+  })({})
+
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Stack sx={{ display: 'flex' }}>
       <CssBaseline />
-      <AppBar component="nav">
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            {constants.TITLE}
-          </Typography>
-          <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
-                {item}
-              </Button>
-            ))}
-          </Box>
+      <NavBar>
+        <Toolbar sx={{ height: '100px' }}>
+          <Grid container columns={12}>
+            <Grid item xs={12} sm={6}>
+              <Stack alignItems={{ xs: 'start', sm: 'center' }} >
+                <Stack
+                  component="img"
+                  alt="Company logo"
+                  src='logo.png'
+                  width={{ xs: '100%', sm: 'inherit' }}
+                />
+              </Stack>
+            </Grid>
+            <Grid item xs={6} order={{ xs: 3, md: 2 }}>
+              <Stack alignItems={{ xs: 'end', sm: 'center' }}>
+                <Stack sx={{ display: { xs: 'none', md: 'inline' } }}>
+                  {navItems.map((item) => (
+                    <Button key={item} 
+                      sx={{ 
+                        color: Colors.BLACK, 
+                        '&:hover': { color: Colors.SECONDARY, fontWeight: 'bold' } 
+                      }}  
+                      >
+                      {item}
+                    </Button>
+                  ))}
+                </Stack>
+              </Stack>
+            </Grid>
+            <Grid item xs={6} order={{ xs: 2, md: 3 }}>
+              <Stack alignItems={'end'}>
+                <IconButton
+                  color="inherit"
+                  aria-label="open drawer"
+                  edge="start"
+                  onClick={handleDrawerToggle}
+                  sx={{ mr: 2, display: { xs: 'flex', md: 'none' } }}
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Stack>
+            </Grid>
+          </Grid>
         </Toolbar>
-				{/* navbar drawer component */}
-				<NavDrawer 
-					mobileOpen={mobileOpen} 
-					handleDrawerToggle={handleDrawerToggle}
-					navItems={navItems}
-				/>
-      </AppBar>
-    </Box>
+      </NavBar>
+      {/* navbar drawer component */}
+      <NavDrawer 
+        mobileOpen={mobileOpen} 
+        handleDrawerToggle={handleDrawerToggle}
+        navItems={navItems}
+      />
+    </Stack>
   );
 }

@@ -1,6 +1,7 @@
 export const Colors = {
     PRIMARY: '#3a526a',
     SECONDARY: '#18ba60',
+    DRAWER: '#1d2738', 
     LIME_GREEN: '#76ff03',
     INFO: '#00a2ff',
     DANGER: '#FF5722',

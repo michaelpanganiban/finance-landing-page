@@ -43,14 +43,15 @@ export const HeaderDetails = () => {
               </Stack>
             </Grid>
             <Grid item xs={6} md={3} lg={1}>
-              <Stack alignItems={{xs: 'center', md: 'start'}}>
+              <Stack alignItems={{xs: 'center', md: 'start'}} >
                 <Button 
                   sx={{ 
                     backgroundColor: Colors.SECONDARY, 
                     color: Colors.WHITE,
                     fontWeight: 'bolder',
                     borderRadius: 0,
-                    minHeight: '47px'
+                    minHeight: '47px',
+                    width: { xs: '100%', sm: 'auto' }
                   }}
                   variant='outlined'
                 >

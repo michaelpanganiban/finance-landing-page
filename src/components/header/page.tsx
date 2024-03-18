@@ -9,7 +9,8 @@ import { HeaderDetails } from './header-details';
 const HeaderBar = styled(AppBar, {
   name: 'HeaderComponent',
   slot: 'Root'
-})(() => ({}))
+})({})
+
 export default function Header() {
   return (
     <Stack>
