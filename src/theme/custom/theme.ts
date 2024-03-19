@@ -6,6 +6,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import { HeaderComponent } from './header-theme';
+import { NavBarComponent } from './navigation-bar';
 
 
 // define openSans font style
@@ -18,6 +19,7 @@ const openSans = Open_Sans({
 declare module '@mui/material/styles' {
     interface Components {
         HeaderComponent: {}
+        NavBarComponent: {}
     }
 }
 
@@ -40,6 +42,7 @@ export const theme = createTheme({
     },
 
     components: {
-        HeaderComponent
+        HeaderComponent,
+        NavBarComponent
     }
 })

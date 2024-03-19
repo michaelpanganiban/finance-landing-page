@@ -4,10 +4,8 @@ export const HeaderComponent= {
 	styleOverrides: {
 		root: {
 			backgroundColor: Colors.PRIMARY,
-			height: '5%',
-    },
-		divider: {
-			color: 'white'
-		}
+			position: 'sticky',
+			elevation: 0
+		},
 	},
 }

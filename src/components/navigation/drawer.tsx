@@ -1,8 +1,9 @@
 'use client'
 
-import { Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Typography } from "@mui/material";
-import { constants } from "../../../theme/enum/constants";
-import React from "react";
+import { Colors } from '@/src/theme/enum/colors';
+import { constants } from '@/src/theme/enum/constants';
+import { Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
+import React from 'react';
 
 interface Props {
 	mobileOpen: boolean,
@@ -12,21 +13,26 @@ interface Props {
 	
 export const NavDrawer = (props: Props) => {
 	const drawer = (
-		<Box onClick={props.handleDrawerToggle} sx={{ textAlign: 'center' }}>
-			<Typography variant="h6" sx={{ my: 2 }}>
-				{constants.TITLE}
-			</Typography>
-			<Divider />
+		<Stack onClick={props.handleDrawerToggle} sx={{ textAlign: 'center'}} alignItems={'center'} padding={2}>
+			<Stack
+				component="img"
+				alt="Company logo"
+				src='logo.png'
+				width='fit-content'
+			/>
+			<Divider sx={{width:'100%', marginTop: 2}} />
 			<List>
 				{props.navItems.map((item) => (
-					<ListItem key={item} disablePadding>
-						<ListItemButton sx={{ textAlign: 'center' }}>
-							<ListItemText primary={item} />
-						</ListItemButton>
-					</ListItem>
+					<Stack key={item}>
+						<ListItem disablePadding>
+							<ListItemButton sx={{ textAlign: 'center' }}>
+								<ListItemText primary={item}/>
+							</ListItemButton>
+						</ListItem>
+					</Stack>
 				))}
 			</List>
-		</Box>
+		</Stack>
 	);
 	
 	return (
@@ -35,11 +41,12 @@ export const NavDrawer = (props: Props) => {
 					variant="temporary"
 					open={props.mobileOpen}
 					onClose={props.handleDrawerToggle}
+					anchor='right'
 					ModalProps={{
 							keepMounted: true, // Better open performance on mobile.
 					}}
 					sx={{
-							display: { xs: 'block', sm: 'none' },
+							display: { xs: 'block', md: 'none' },
 							'& .MuiDrawer-paper': { boxSizing: 'border-box', width: constants.DRAWER_WIDTH },
 					}}
 				>
