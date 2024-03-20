@@ -1,4 +1,4 @@
-import { Colors } from '../enum/colors';
+import { Colors } from '../../enum/colors';
 
 export const NavBarComponent = {
 	styleOverrides: {

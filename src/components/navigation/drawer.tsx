@@ -1,7 +1,6 @@
 'use client'
 
-import { Colors } from '@/src/theme/enum/colors';
-import { constants } from '@/src/theme/enum/constants';
+import { constants } from '@/src/enum/constants';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import React from 'react';
 

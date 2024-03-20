@@ -9,9 +9,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { NavDrawer } from './drawer';
 import { Grid, Stack, styled } from '@mui/material';
-import { Colors } from '@/src/theme/enum/colors';
+import { Colors } from '@/src/enum/colors';
 
-const navItems = ['Home', 'About', 'Services', 'Portfolio', 'Blogs', 'Contact'];
+const navItems = ['Home', 'Services', 'Portfolio', 'Blogs', 'About', 'Contact'];
 
 export default function NavBar() {
 	const [mobileOpen, setMobileOpen] = React.useState(false);

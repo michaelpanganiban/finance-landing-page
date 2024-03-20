@@ -4,8 +4,8 @@ import CallSharpIcon from '@mui/icons-material/CallSharp';
 import EmailSharpIcon from '@mui/icons-material/EmailSharp';
 import HelpSharpIcon from '@mui/icons-material/HelpSharp';
 import Button from '@mui/material/Button';
-import { Colors } from '@/src/theme/enum/colors';
-import { constants } from '@/src/theme/enum/constants';
+import { Colors } from '@/src/enum/colors';
+import { constants } from '@/src/enum/constants';
 
 export const HeaderDetails = () => {
     return (
