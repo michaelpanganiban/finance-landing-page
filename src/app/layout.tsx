@@ -5,7 +5,7 @@ import { Stack } from '@mui/material'
 import ThemeRegistry from '../components/theme/ThemeRegistry'
 import Header from '../components/header/page'
 import NavBar from '../components/navigation/page'
-import { SwipeableTextMobileStepper } from '../components/carousel/carousel'
+import { Home } from '../components/carousel/page'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
@@ -26,7 +26,7 @@ export default function RootLayout({
           </Stack>
           <Header />
           <NavBar />
-          <SwipeableTextMobileStepper />
+          <Home />
         </body>
       </ThemeRegistry>
     </html>

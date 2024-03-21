@@ -4,8 +4,8 @@ import CallSharpIcon from '@mui/icons-material/CallSharp';
 import EmailSharpIcon from '@mui/icons-material/EmailSharp';
 import HelpSharpIcon from '@mui/icons-material/HelpSharp';
 import Button from '@mui/material/Button';
-import { Colors } from '@/src/enum/colors';
-import { constants } from '@/src/enum/constants';
+import { SECONDARY, WHITE } from '@/src/enum/colors';
+import { CONTACT_NUMBER, EMAIL } from '@/src/enum/constants';
 
 export const HeaderDetails = () => {
     return (
@@ -17,7 +17,7 @@ export const HeaderDetails = () => {
                   <CallSharpIcon 
                     style={{ fontSize: 'small'}}
                   /> &nbsp;
-                  Call us: {constants.CONTACT_NUMBER}&nbsp;&nbsp;
+                  Call us: { CONTACT_NUMBER }&nbsp;&nbsp;
                 </Typography>
               </Stack>
             </Grid>
@@ -27,7 +27,7 @@ export const HeaderDetails = () => {
                   <EmailSharpIcon 
                     style={{ fontSize: 'small' }} 
                   /> &nbsp;
-                  Email: {constants.EMAIL}
+                  Email: { EMAIL }
                 </Typography>
               </Stack>
             </Grid>
@@ -46,8 +46,8 @@ export const HeaderDetails = () => {
               <Stack alignItems={{xs: 'center', md: 'start'}} >
                 <Button 
                   sx={{ 
-                    backgroundColor: Colors.SECONDARY, 
-                    color: Colors.WHITE,
+                    backgroundColor: SECONDARY, 
+                    color: WHITE,
                     fontWeight: 'bolder',
                     borderRadius: 0,
                     minHeight: '47px',

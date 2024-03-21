@@ -1,18 +1,18 @@
 'use client'
 
-import * as React from 'react';
 import { useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-import { constants } from '@/src/enum/constants';
+import { CAROUSEL_IMAGES } from '@/src/enum/constants';
 import { CarouselContent } from './carousel-content';
+import { useState } from 'react';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-export const SwipeableTextMobileStepper = () => {
+export const Home = () => {
   const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
+  const [activeStep, setActiveStep] = useState(0);
   const handleStepChange = (step: number) => {
     setActiveStep(step);
   };
@@ -25,12 +25,12 @@ export const SwipeableTextMobileStepper = () => {
         onChangeIndex={handleStepChange}
         enableMouseEvents
       >
-        {constants.CAROUSEL_IMAGES.map((step, index) => (
+        {CAROUSEL_IMAGES.map((step, index) => (
           <CarouselContent 
             key={index}
             image={step.imagePath} 
-            index={0} 
-            activeStep={0}            
+            index={index} 
+            activeStep={activeStep}            
           />
         ))}
       </AutoPlaySwipeableViews>

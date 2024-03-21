@@ -1,12 +1,12 @@
-import { Colors } from '../../enum/colors';
+import { WHITE, BLACK } from '../../enum/colors';
 
 export const NavBarComponent = {
 	styleOverrides: {
 		root: {
-			backgroundColor: Colors.WHITE,
+			backgroundColor: WHITE,
 			position: 'sticky',
 			elevation: 0,
-			color: Colors.BLACK
+			color: BLACK
 		},
 	},
 }

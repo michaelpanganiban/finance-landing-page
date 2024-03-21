@@ -9,7 +9,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { NavDrawer } from './drawer';
 import { Grid, Stack, styled } from '@mui/material';
-import { Colors } from '@/src/enum/colors';
+import { BLACK, SECONDARY } from '@/src/enum/colors';
 
 const navItems = ['Home', 'Services', 'Portfolio', 'Blogs', 'About', 'Contact'];
 
@@ -46,8 +46,8 @@ export default function NavBar() {
                   {navItems.map((item) => (
                     <Button key={item} 
                       sx={{ 
-                        color: Colors.BLACK, 
-                        '&:hover': { color: Colors.SECONDARY, fontWeight: 'bold' } 
+                        color: BLACK, 
+                        '&:hover': { color: SECONDARY, fontWeight: 'bold' } 
                       }}  
                       >
                       {item}
