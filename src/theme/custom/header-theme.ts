@@ -1,9 +1,9 @@
-import { PRIMARY } from '../../enum/colors';
+import { COLORS } from '../../enum/colors';
 
 export const HeaderComponent= {
 	styleOverrides: {
 		root: {
-			backgroundColor: PRIMARY,
+			backgroundColor: COLORS.PRIMARY,
 			position: 'sticky',
 			elevation: 0
 		},
