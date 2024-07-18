@@ -1,6 +1,6 @@
 'use client'
 
-import { Stack } from '@mui/material'
+import { Stack, Typography } from '@mui/material'
 
 interface Props {
 	image: string,
@@ -14,16 +14,18 @@ export const CarouselContent = (props: Props) => {
     {
 			Math.abs(props.activeStep - props.index) <= 2 ? 
 			(
-				<Stack
-					component='img'
-					sx={{
-							maxHeight: '740px',
-							display: 'block',
-							overflow: 'hidden',
-							width: '100%',
-					}}
-					src={props.image}
-				/>
+				<Stack sx={{ position: 'relative', width: '100%', maxHeight: '740px' }}>
+					<Stack
+						component='img'
+						sx={{
+								display: 'block',
+								overflow: 'hidden',
+								width: '100%',
+						}}
+						src={props.image}
+					/>
+					  
+				</Stack>
 			) : null
 		}
     </Stack>

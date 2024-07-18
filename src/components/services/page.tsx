@@ -1,6 +1,7 @@
 'use client'
 
 import { Stack, Typography } from '@mui/material'
+import ServicesList from './services-list'
 
 export const Services = () => {
 	return (
@@ -12,6 +13,7 @@ export const Services = () => {
 			>
 				What We Can Offer You
 			</Typography>
+			<ServicesList />
 		</Stack>
 	)
 }
