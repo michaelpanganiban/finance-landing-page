@@ -1,7 +1,6 @@
 'use client'
 
-import { Colors } from '@/src/theme/enum/colors';
-import { constants } from '@/src/theme/enum/constants';
+import { DRAWER_WIDTH } from '@/src/enum/constants';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
 import React from 'react';
 
@@ -47,7 +46,7 @@ export const NavDrawer = (props: Props) => {
 					}}
 					sx={{
 							display: { xs: 'block', md: 'none' },
-							'& .MuiDrawer-paper': { boxSizing: 'border-box', width: constants.DRAWER_WIDTH },
+							'& .MuiDrawer-paper': { boxSizing: 'border-box', width: DRAWER_WIDTH },
 					}}
 				>
 					{drawer}
