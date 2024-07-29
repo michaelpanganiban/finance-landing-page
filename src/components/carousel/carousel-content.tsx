@@ -1,6 +1,7 @@
 'use client'
 
-import { Stack, Typography } from '@mui/material'
+import { Stack } from '@mui/material';
+import { CarouselInfo } from './carousel-info';
 
 interface Props {
 	image: string,
@@ -24,7 +25,7 @@ export const CarouselContent = (props: Props) => {
 						}}
 						src={props.image}
 					/>
-					  
+					<CarouselInfo />
 				</Stack>
 			) : null
 		}

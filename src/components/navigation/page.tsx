@@ -13,7 +13,7 @@ import { COLORS } from '@/src/enum/colors';
 
 const navItems = ['Home', 'Services', 'Portfolio', 'Blogs', 'About', 'Contact'];
 
-export default function NavBar() {
+export default function NavBar () {
 	const [mobileOpen, setMobileOpen] = React.useState(false);
 	const handleDrawerToggle = () => {
 		setMobileOpen((prevState) => !prevState);

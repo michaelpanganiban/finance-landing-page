@@ -10,7 +10,7 @@ import { theme } from '@/src/theme/custom/theme';
 
 // This implementation is from emotion-js
 // https://github.com/emotion-js/emotion/issues/2928#issuecomment-1319747902
-export default function ThemeRegistry({
+export default function ThemeRegistry ({
     children
 }: {
     children: React.ReactNode

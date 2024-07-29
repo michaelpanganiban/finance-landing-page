@@ -17,6 +17,7 @@ const openSans = Open_Sans({
 })
 
 declare module '@mui/material/styles' {
+    // eslint-disable-next-line no-unused-vars
     interface Components {
         HeaderComponent: {}
         NavBarComponent: {}
