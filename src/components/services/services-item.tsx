@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { IconButton, ImageListItem, ImageListItemBar } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
 import { servicesItems } from './types'
@@ -6,7 +7,7 @@ interface Props {
 	item: servicesItems
 }
 
-export default function ServicesItem(props: Props) {
+export default function ServicesItem (props: Props) {
 	return (
 		<ImageListItem key={props.item.img}>
 			<img

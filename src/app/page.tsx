@@ -1,6 +1,6 @@
-import { Box, Container } from '@mui/material'
+import { Container } from '@mui/material'
 
-export default function Home() {
+export default function Home () {
   return (
     <Container sx={{
       height: '100%',

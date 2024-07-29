@@ -11,7 +11,7 @@ const HeaderBar = styled(AppBar, {
   slot: 'Root'
 })({})
 
-export default function Header() {
+export default function Header () {
   return (
     <Stack>
       <CssBaseline />
