@@ -81,7 +81,7 @@ export default function ServicesList () {
   return (
     <ImageList sx={{ width: '100%'}}>
       <ImageListItem key="Subheader" cols={6}>
-        <ListSubheader component="div">December</ListSubheader>
+        <ListSubheader component="div">THIS IS DEV ENVIRONMENT</ListSubheader>
       </ImageListItem>
       {/* {itemData.map((item) => (
         <ServicesItem item={item} />
