@@ -1,4 +1,4 @@
-name: Manual Release
+name: Manual Release - Prod
 
 on:
   workflow_dispatch:
@@ -47,4 +47,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          destination_dir: .
           publish_branch: gh-pages
