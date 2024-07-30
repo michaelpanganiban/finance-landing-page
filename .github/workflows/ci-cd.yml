@@ -1,4 +1,4 @@
-name: Manual Release - Prod
+name: Manual Release To Prod
 
 on:
   workflow_dispatch:
