@@ -56,7 +56,7 @@ jobs:
           publish_branch: gh-pages
 
       - name: Add nojekyll file
-        run: echo '' > ./out/dev/.nojekyll
+        run: echo '' > ./dev/.nojekyll
 
       - name: Add CNAME file for staging
-        run: echo 'dev.michaelxsarah.online' > ./out/dev/CNAME
+        run: echo 'dev.michaelxsarah.online' > ./dev/CNAME
