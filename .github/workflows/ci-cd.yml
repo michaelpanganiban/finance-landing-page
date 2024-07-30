@@ -41,6 +41,15 @@ jobs:
 
       - name: Build the project
         run: npm run build
+      
+      - name: Ensure root directory exists
+        run: mkdir -p ./out
+      
+      - name: Add nojekyll file
+        run: echo '' > ./out/.nojekyll
+
+      - name: Add CNAME file for production
+        run: echo 'prod.michaelxsarah.online' > ./out/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -49,9 +58,3 @@ jobs:
           publish_dir: ./out
           destination_dir: .
           publish_branch: gh-pages
-      
-      - name: Add nojekyll file
-      run: echo '' > ./out/.nojekyll
-
-      - name: Add CNAME file for production
-        run: echo 'prod.michaelxsarah.online' > ./out/CNAME
