@@ -49,3 +49,9 @@ jobs:
           publish_dir: ./out
           destination_dir: .
           publish_branch: gh-pages
+      
+      - name: Add nojekyll file
+      run: echo '' > ./out/.nojekyll
+
+      - name: Add CNAME file for production
+        run: echo 'prod.michaelxsarah.online' > ./out/CNAME
