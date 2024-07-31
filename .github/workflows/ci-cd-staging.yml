@@ -1,7 +1,12 @@
-name: Manual Release To Prod
+name: Deploy to Staging
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - staging
+  pull_request:
+    branches:
+      - staging
 
 jobs:
   lint:
@@ -42,19 +47,19 @@ jobs:
       - name: Build the project
         run: npm run build
       
-      - name: Ensure root directory exists
-        run: mkdir -p ./out
-      
-      - name: Add nojekyll file
-        run: echo '' > ./out/.nojekyll
+      - name: Ensure dev directory exists
+        run: mkdir -p ./out/dev
 
-      - name: Add CNAME file for production
-        run: echo 'prod.michaelxsarah.online' > ./out/CNAME
+      - name: Add nojekyll file
+        run: echo '' > ./out/dev/.nojekyll
+
+      - name: Add CNAME file for staging
+        run: echo 'dev.michaelxsarah.online' > ./out/dev/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
-          destination_dir: .
+          destination_dir: dev
           publish_branch: gh-pages
