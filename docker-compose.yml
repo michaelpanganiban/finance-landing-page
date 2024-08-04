@@ -1,0 +1,13 @@
+services:
+  web:
+    image: finance-template
+    build:
+      context: .
+    volumes:
+      - .:/app:cached
+    ports:
+      - "3001:3002"
+    environment:
+      - PORT=3002
+    command: npm run dev
+
