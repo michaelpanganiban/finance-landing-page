@@ -20,7 +20,7 @@ RUN npm run build
 EXPOSE 3002
 
 # Start the Next.js app
-# CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start"]
 
 # For dev mode
-CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "dev"]
