@@ -14,5 +14,6 @@ export const COLORS = {
   INVERSE: '#2F3D4A',
   SHAFT: '#333',
   WHITE: '#fff',
-  BLACK: '#000'
+  BLACK: '#000',
+  BACKGROUND: '#f7f7f7'
 }

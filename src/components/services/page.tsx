@@ -5,15 +5,15 @@ import ServicesList from './services-list'
 
 export const Services = () => {
 	return (
-		<Stack>
+		<Stack minHeight={400}>
 			<Typography 
 				fontFamily={'sans-serif'}
 				variant='h4'
 				fontWeight={'bold'}
+				marginTop={5}
 				fontSize={{
 					xs: 'small',
-					sm: 20,
-					md: 35
+					sm: 35,
 				}}
 			>
 				<span className="underline-word">Our</span> Services
