@@ -10,6 +10,11 @@ export const Services = () => {
 				fontFamily={'sans-serif'}
 				variant='h4'
 				fontWeight={'bold'}
+				fontSize={{
+					xs: 'small',
+					sm: 20,
+					md: 35
+				}}
 			>
 				<span className="underline-word">Our</span> Services
 			</Typography>
