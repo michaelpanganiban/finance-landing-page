@@ -10,11 +10,12 @@ import Button from '@mui/material/Button';
 import { NavDrawer } from './drawer';
 import { Grid, Stack, styled } from '@mui/material';
 import { COLORS } from '@/src/enum/colors';
+import { useState } from 'react';
 
 const navItems = ['Home', 'Services', 'Portfolio', 'Blogs', 'About', 'Contact'];
 
 export default function NavBar () {
-	const [mobileOpen, setMobileOpen] = React.useState(false);
+	const [mobileOpen, setMobileOpen] = useState(false);
 	const handleDrawerToggle = () => {
 		setMobileOpen((prevState) => !prevState);
 	};

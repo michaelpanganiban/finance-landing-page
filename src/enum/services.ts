@@ -1,7 +1,7 @@
 export const SERVICES = [
     {
-        title: 'Banking',
-        icon: 'AccountBalance',
+        title: 'Investment',
+        icon: 'PaidSharp',
         description: 'Services for businesses, including loans, credit lines, and cash management.'
     },
     {
@@ -10,38 +10,23 @@ export const SERVICES = [
         description: 'Services for businesses, including loans, credit lines, and cash management.'
     },
     {
-        title: 'Banking',
-        icon: 'AccountBalance',
+        title: 'Insurance',
+        icon: 'GppGoodSharp',
         description: 'Services for businesses, including loans, credit lines, and cash management.'
     },
     {
-        title: 'Banking',
-        icon: 'AccountBalance',
+        title: 'Loans & Credit',
+        icon: 'CreditCardSharp',
         description: 'Services for businesses, including loans, credit lines, and cash management.'
     },
     {
-        title: 'Banking',
-        icon: 'AccountBalance',
+        title: 'Corporate',
+        icon: 'CorporateFareSharp',
         description: 'Services for businesses, including loans, credit lines, and cash management.'
     },
     {
-        title: 'Banking',
-        icon: 'AccountBalance',
-        description: 'Services for businesses, including loans, credit lines, and cash management.'
-    },
-    {
-        title: 'Banking',
-        icon: 'AccountBalance',
-        description: 'Services for businesses, including loans, credit lines, and cash management.'
-    },
-    {
-        title: 'Banking',
-        icon: 'AccountBalance',
-        description: 'Services for businesses, including loans, credit lines, and cash management.'
-    },
-    {
-        title: 'Banking',
-        icon: 'AccountBalance',
+        title: 'Tax',
+        icon: 'RequestQuoteSharp',
         description: 'Services for businesses, including loans, credit lines, and cash management.'
     },
 ]
