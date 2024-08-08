@@ -28,7 +28,9 @@ export default function RootLayout ({
           <Header />
           <NavBar />
           <Home />
-          <Services />
+          <Stack className="sub-body">
+            <Services />
+          </Stack>
         </body>
       </ThemeRegistry>
     </html>
