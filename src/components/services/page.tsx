@@ -11,7 +11,7 @@ export const Services = () => {
 				variant='h4'
 				fontWeight={'bold'}
 			>
-				What We Can Offer You
+				<span className="underline-word">Our</span> Services
 			</Typography>
 			<ServicesList />
 		</Stack>
