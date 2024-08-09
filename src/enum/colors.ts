@@ -7,7 +7,7 @@ export const COLORS = {
   INFO: '#00a2ff',
   DANGER: '#FF5722',
   WARNING: '#FFC107',
-  DARK: '#0e1b20',
+  DARK: '#2e363a',
   LIGHT: '#aaa',
   MUTED: '#abafb3',
   BORDER: '#DDDFE1',
@@ -15,5 +15,6 @@ export const COLORS = {
   SHAFT: '#333',
   WHITE: '#fff',
   BLACK: '#000',
-  BACKGROUND: '#f7f7f7'
+  BACKGROUND: '#f7f7f7',
+  GRAY: '#cccccc'
 }
