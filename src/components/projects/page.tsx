@@ -26,5 +26,5 @@ export const Projects = () => {
 			</Typography>
 			<ProjectList images={PROJECTS}/>
 		</Stack>
-	)
+	);
 }

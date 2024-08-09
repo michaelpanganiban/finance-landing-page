@@ -12,7 +12,7 @@ import { Grid, Stack, styled } from '@mui/material';
 import { COLORS } from '@/src/enum/colors';
 import { useState } from 'react';
 
-const navItems = ['Home', 'Services', 'Portfolio', 'Blogs', 'About', 'Contact'];
+const navItems = ['Home', 'Services', 'Portfolio', 'Contact Us', 'About'];
 
 export default function NavBar () {
 	const [mobileOpen, setMobileOpen] = useState(false);

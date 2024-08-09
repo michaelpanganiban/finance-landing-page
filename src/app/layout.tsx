@@ -8,6 +8,7 @@ import NavBar from '../components/navigation/page'
 import { Home } from '../components/carousel/page'
 import { Services } from '../components/services/page'
 import { Projects } from '../components/projects/page'
+import { ContactUs } from '../components/contact/page'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
@@ -31,6 +32,7 @@ export default function RootLayout ({
           <Home />
           <Services />
           <Projects />
+          <ContactUs />
         </body>
       </ThemeRegistry>
     </html>

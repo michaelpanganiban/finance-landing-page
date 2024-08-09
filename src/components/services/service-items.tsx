@@ -17,6 +17,7 @@ export const ServiceItems: React.FC<ServiceItemProps> = ({ obj }) => {
 						<IconComponent
 							sx={{
 								color: COLORS.SECONDARY,
+								'&:hover': { color: COLORS.PRIMARY},
 								fontSize: {
 									xs: 'medium',
 									sm: 50,
