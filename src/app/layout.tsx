@@ -7,6 +7,7 @@ import Header from '../components/header/page'
 import NavBar from '../components/navigation/page'
 import { Home } from '../components/carousel/page'
 import { Services } from '../components/services/page'
+import { Projects } from '../components/projects/page'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
@@ -28,9 +29,8 @@ export default function RootLayout ({
           <Header />
           <NavBar />
           <Home />
-          <Stack className="sub-body">
-            <Services />
-          </Stack>
+          <Services />
+          <Projects />
         </body>
       </ThemeRegistry>
     </html>

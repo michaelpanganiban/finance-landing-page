@@ -13,26 +13,26 @@ export const ServiceItems: React.FC<ServiceItemProps> = ({ obj }) => {
     return (
 			<>
 				<Grid item>
-					<Stack alignItems={{ xs: 'center', md: 'start' }}>
+					<Stack alignItems={{ xs: 'start' }}>
 						<IconComponent
 							sx={{
 								color: COLORS.SECONDARY,
 								fontSize: {
 									xs: 'medium',
-									sm: 25,
-									md: 50,
+									sm: 50,
 									lg: 100
 								}
 							}} />
 					</Stack>
-				</Grid><Grid item xs={2}>
-					<Stack alignItems={{ xs: 'center', md: 'start' }}>
+				</Grid>
+				<Grid item xs={8} md={2}>
+					<Stack alignItems={{ xs: 'start' }}>
 						<Typography
 							variant='h5'
 							fontWeight='bold'
 							fontSize={{
 								xs: 10,
-								sm: 'medium'
+								sm: 'large'
 							}}
 						>
 							{obj.title}

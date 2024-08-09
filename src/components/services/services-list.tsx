@@ -19,11 +19,11 @@ export default function ServicesList () {
 	});
 
   return (
-    <Stack>
-			<Grid container columns={9} spacing={1} marginTop='3%'>
+    <Stack className='sub-body sub-body-items'>
+			<Grid container columns={9} spacing={1} marginBottom={5}>
 				{ firstThree }
 			</Grid>
-			<Grid container columns={9} spacing={1} marginTop='3%'>
+			<Grid container columns={9} spacing={1}>
 				{ lastThree }
 			</Grid>
 		</Stack>
