@@ -1,5 +1,6 @@
 export interface Image {
     imageLink: string,
+    imageTitle: string,
     imageAlt: string
 }
 
