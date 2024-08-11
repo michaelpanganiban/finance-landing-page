@@ -9,6 +9,7 @@ import { Home } from '../components/carousel/page'
 import { Services } from '../components/services/page'
 import { Projects } from '../components/projects/page'
 import { ContactUs } from '../components/contact/page'
+import { AboutUs } from '../components/about/pages'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
@@ -33,6 +34,7 @@ export default function RootLayout ({
           <Services />
           <Projects />
           <ContactUs />
+          <AboutUs />
         </body>
       </ThemeRegistry>
     </html>

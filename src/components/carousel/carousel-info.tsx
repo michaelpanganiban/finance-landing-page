@@ -1,4 +1,5 @@
 import { COLORS } from '@/src/enum/colors';
+import { EMAIL } from '@/src/enum/constants';
 import { Button, Grid, Stack, Typography } from '@mui/material';
 
 export const CarouselInfo = () => {
@@ -69,6 +70,8 @@ export const CarouselInfo = () => {
         <Grid item columns={3}>
           <Stack alignItems={{xs: 'center', md: 'end'}} >
             <Button 
+              component='a'
+              href={`mailto: ${EMAIL}`}
               sx={{ 
                 backgroundColor: COLORS.PRIMARY, 
                 color: COLORS.WHITE,

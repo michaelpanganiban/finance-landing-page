@@ -12,7 +12,7 @@ import { Grid, Stack, styled } from '@mui/material';
 import { COLORS } from '@/src/enum/colors';
 import { useState } from 'react';
 
-const navItems = ['Home', 'Services', 'Portfolio', 'Contact Us', 'About'];
+const navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact Us'];
 
 export default function NavBar () {
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -48,7 +48,7 @@ export default function NavBar () {
                     <Button key={item} 
                       sx={{ 
                         color: COLORS.BLACK,
-                        '&:hover': { color: COLORS.SECONDARY, fontWeight: 'bold' } 
+                        '&:hover': { color: COLORS.SECONDARY, fontWeight: 'bold' },
                       }}  
                       >
                       {item}

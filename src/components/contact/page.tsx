@@ -2,6 +2,7 @@
 
 import { COLORS } from '@/src/enum/colors';
 import { Button, Grid, Stack, Typography } from '@mui/material';
+import { EMAIL } from '@/src/enum/constants'
 
 export const ContactUs = () => {
     return (
@@ -80,7 +81,7 @@ export const ContactUs = () => {
                     </Typography>
                     <Button 
                         component="a" 
-                        href="mailto:example@example.com" 
+                        href={`mailto:${EMAIL}`} 
                         sx={{ 
                             backgroundColor: COLORS.SECONDARY, 
                             color: COLORS.WHITE,
