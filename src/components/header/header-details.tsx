@@ -45,6 +45,8 @@ export const HeaderDetails = () => {
             <Grid item xs={6} md={3} lg={1}>
               <Stack alignItems={{xs: 'center', md: 'start'}} >
                 <Button 
+                  component='a'
+                  href={`mailto: ${EMAIL}`}
                   sx={{ 
                     backgroundColor: COLORS.SECONDARY, 
                     color: COLORS.WHITE,

@@ -36,46 +36,46 @@ export const ProjectItems:React.FC<ProjectItemProps> = ({item}) => {
                         overflow: 'hidden', // Hide any overflow
                     }} 
                 >
-                    <Grid container columns={6} spacing={2}>
-                        <Grid item xs={5}>
-                            <Typography
-                                sx={{
-                                        alignItems: 'center',
-                                        overflow: 'hidden',
-                                        fontWeight: 'bold',
-                                        whiteSpace: 'normal',
-                                        display: '-webkit-box',
-                                        WebkitBoxOrient: 'vertical',
-                                        WebkitLineClamp: 3, // Limit to 3 lines, adjust as needed
-                                        marginBottom: 2
-                                    }} 
-                                >
-                                {item.imageTitle}
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={1}>
-                            <IconButton
-                                sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
-                                aria-label={`info about ${item.imageTitle}`}
-                                title= {item.imageAlt}
-                                >
-                                <InfoIcon />
-                            </IconButton>
-                        </Grid>
-                    </Grid>
-                    <Typography
-                       sx={{
-                            fontSize: 12,
-                            alignItems: 'center',
-                            overflow: 'hidden',
-                            whiteSpace: 'normal',
-                            display: '-webkit-box',
-                            WebkitBoxOrient: 'vertical',
-                            WebkitLineClamp: 3, // Limit to 3 lines, adjust as needed
-                        }} 
-                    >
-                        {item.imageAlt}
-                    </Typography>
+                  <Grid container columns={6} spacing={2}>
+                      <Grid item xs={5}>
+                          <Typography
+                              sx={{
+                                      alignItems: 'center',
+                                      overflow: 'hidden',
+                                      fontWeight: 'bold',
+                                      whiteSpace: 'normal',
+                                      display: '-webkit-box',
+                                      WebkitBoxOrient: 'vertical',
+                                      WebkitLineClamp: 3, // Limit to 3 lines, adjust as needed
+                                      marginBottom: 2
+                                  }} 
+                              >
+                              {item.imageTitle}
+                          </Typography>
+                      </Grid>
+                      <Grid item xs={1}>
+                          <IconButton
+                              sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                              aria-label={`info about ${item.imageTitle}`}
+                              title= {item.imageAlt}
+                              >
+                              <InfoIcon />
+                          </IconButton>
+                      </Grid>
+                  </Grid>
+                  <Typography
+                      sx={{
+                          fontSize: 12,
+                          alignItems: 'center',
+                          overflow: 'hidden',
+                          whiteSpace: 'normal',
+                          display: '-webkit-box',
+                          WebkitBoxOrient: 'vertical',
+                          WebkitLineClamp: 3, // Limit to 3 lines, adjust as needed
+                      }} 
+                  >
+                      {item.imageAlt}
+                  </Typography>
                 </Box>
               }
               sx={{

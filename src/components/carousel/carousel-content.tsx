@@ -7,6 +7,10 @@ interface Props {
 	image: string,
 	index: number,
 	activeStep: number,
+	carouselConfig: {
+		width: string,
+		includeContent: boolean
+	}
 }
 
 export const CarouselContent = (props: Props) => {
@@ -21,11 +25,15 @@ export const CarouselContent = (props: Props) => {
 						sx={{
 								display: 'block',
 								overflow: 'hidden',
-								width: '100%',
+								width: props.carouselConfig.width,
 						}}
 						src={props.image}
 					/>
-					<CarouselInfo />
+					{
+						props.carouselConfig.includeContent && (
+							<CarouselInfo />
+						)
+					}
 				</Stack>
 			) : null
 		}
