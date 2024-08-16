@@ -16,7 +16,10 @@ export const Home = () => {
   const handleStepChange = (step: number) => {
     setActiveStep(step);
   };
-
+  const carouselConfig = {
+    width: '100%',
+    includeContent: true
+  }
   return (
     <Stack>
       <AutoPlaySwipeableViews
@@ -30,7 +33,8 @@ export const Home = () => {
             key={index}
             image={step.imagePath} 
             index={index} 
-            activeStep={activeStep}            
+            activeStep={activeStep}
+            carouselConfig= {carouselConfig}
           />
         ))}
       </AutoPlaySwipeableViews>

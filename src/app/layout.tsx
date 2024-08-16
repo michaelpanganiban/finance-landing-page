@@ -5,22 +5,21 @@ import { Stack } from '@mui/material'
 import ThemeRegistry from '../components/theme/ThemeRegistry'
 import Header from '../components/header/page'
 import NavBar from '../components/navigation/page'
-import { Home } from '../components/carousel/page'
-import { Services } from '../components/services/page'
-import { Projects } from '../components/projects/page'
-import { ContactUs } from '../components/contact/page'
-import { AboutUs } from '../components/about/pages'
+import { DefaultComponents } from '../components/pages';
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
   description: 'Hello there',
 }
 
+
 export default function RootLayout ({
   children,
 }: {
   children: React.ReactNode
 }) {
+
+
   return (
     <html lang="en">
       <ThemeRegistry>
@@ -30,11 +29,7 @@ export default function RootLayout ({
           </Stack>
           <Header />
           <NavBar />
-          <Home />
-          <Services />
-          <Projects />
-          <ContactUs />
-          <AboutUs />
+          <DefaultComponents />
         </body>
       </ThemeRegistry>
     </html>

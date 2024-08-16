@@ -3,8 +3,13 @@
 import { COLORS } from '@/src/enum/colors'
 import { Stack, Typography } from '@mui/material'
 import { AboutUsList } from './about-us-list';
+import React, { Dispatch, SetStateAction } from 'react';
 
-export const AboutUs = () => {
+interface AboutUsInterface {
+	setViewComponents: Dispatch<SetStateAction<string>>;
+}
+
+export const AboutUs:React.FC<AboutUsInterface> = ({setViewComponents}) => {
     return (
 		<Stack sx={{
 			backgroundColor: COLORS.WHITE
@@ -23,7 +28,7 @@ export const AboutUs = () => {
 			>
 				<span className="underline-word">About</span> Us
 			</Typography>
-            <AboutUsList />
+            <AboutUsList setViewComponents= {setViewComponents} />
 		</Stack>
     );
 }

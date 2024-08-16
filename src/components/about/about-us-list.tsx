@@ -6,12 +6,17 @@ import { ABOUT_US } from '@/src/enum/about-us';
 import { AboutUsImagesInterface } from './types';
 import UnfoldMore from '@mui/icons-material/UnfoldMore';
 import { COLORS } from '@/src/enum/colors';
+import React, { Dispatch, SetStateAction } from 'react';
 
-export const AboutUsList = () => {
+interface AboutUsInterface {
+	setViewComponents: Dispatch<SetStateAction<string>>;
+}
+
+export const AboutUsList:React.FC<AboutUsInterface> = ({setViewComponents}) => {
 
     const aboutUsDetails = ABOUT_US.map((item: AboutUsImagesInterface, index) => {
         return (
-            <Grid item xs={1} key={index}>
+            <Grid item xs={3} md={1} key={index}>
                 <ImageListItem className='image-list-item'>
                     <img
                         style={{
@@ -45,7 +50,7 @@ export const AboutUsList = () => {
                                 }} 
                             >
                             <Grid container columns={6} spacing={2}>
-                                <Grid item xs={5}>
+                                <Grid item xs={4} lg={5}>
                                     <Typography
                                         sx={{
                                                 alignItems: 'center',
@@ -56,7 +61,10 @@ export const AboutUsList = () => {
                                                 WebkitBoxOrient: 'vertical',
                                                 WebkitLineClamp: 3, // Limit to 3 lines, adjust as needed
                                                 marginBottom: 2,
-                                                fontSize: 20,
+                                                fontSize: {
+                                                    xs: 15,
+                                                    lg: 20
+                                                },
                                                 color: COLORS.SECONDARY
                                             }} 
                                         >
@@ -68,7 +76,8 @@ export const AboutUsList = () => {
                                         sx={{ color: COLORS.PRIMARY }}
                                         aria-label={`info about ${item.imageName}`}
                                         title= {item.imageName}
-                                        >
+                                        onClick={() => setViewComponents(item.redirect)}
+                                    >
                                         <UnfoldMore />
                                     </IconButton>
                                 </Grid>

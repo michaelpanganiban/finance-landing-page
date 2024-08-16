@@ -1,20 +1,22 @@
-export const ABOUT_US = [
+export const SPECIALIZATION = [
     {
-        link: 'images/about/overview.jpg',
-        imageName: 'Overview',
+        link: 'images/specializations/mutual-funds.jpg',
+        imageName: 'Mutual Funds',
         details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        redirect: 'overview'
     },
     {
-        link: 'images/about/team.jpg',
-        imageName: 'Our Team',
+        link: 'images/specializations/personal-insurance.jpg',
+        imageName: 'Personal Insurance',
         details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        redirect: 'our-team'
     },
     {
-        link: 'images/about/specializations.jpg',
-        imageName: 'Specializations',
+        link: 'images/specializations/retirement.jpg',
+        imageName: 'Retirement Plan',
         details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
-        redirect: 'specializations'
+    },
+    {
+        link: 'images/specializations/sp1.jpg',
+        imageName: 'Investment Planning',
+        details: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     },
 ]
