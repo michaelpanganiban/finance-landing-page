@@ -3,7 +3,7 @@
 import { CAROUSEL_IMAGES } from '@/src/enum/constants';
 import { useTheme } from '@mui/material/styles';
 import { Box, IconButton } from '@mui/material';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { CarouselContent } from '../../carousel/carousel-content';
