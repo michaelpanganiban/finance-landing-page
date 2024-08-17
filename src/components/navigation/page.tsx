@@ -11,8 +11,7 @@ import { NavDrawer } from './drawer';
 import { Grid, Stack, styled } from '@mui/material';
 import { COLORS } from '@/src/enum/colors';
 import { useState } from 'react';
-
-const navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact Us'];
+import { NAV_ITEMS } from '@/src/enum/constants';
 
 export default function NavBar () {
 	const [mobileOpen, setMobileOpen] = useState(false);
@@ -44,7 +43,7 @@ export default function NavBar () {
             <Grid item xs={6} order={{ xs: 3, md: 2 }}>
               <Stack alignItems={{ xs: 'end', sm: 'center' }}>
                 <Stack sx={{ display: { xs: 'none', md: 'inline' } }}>
-                  {navItems.map((item) => (
+                  {NAV_ITEMS.map((item) => (
                     <Button key={item} 
                       sx={{ 
                         color: COLORS.BLACK,
@@ -77,7 +76,7 @@ export default function NavBar () {
       <NavDrawer 
         mobileOpen={mobileOpen} 
         handleDrawerToggle={handleDrawerToggle}
-        navItems={navItems}
+        navItems={NAV_ITEMS}
       />
     </Stack>
   );
