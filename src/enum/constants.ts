@@ -14,3 +14,5 @@ export const CAROUSEL_IMAGES= [
 			imagePath: 'images/carousel/c2.jpg'
 	}
 ]
+export const ADDRESS = 'PO Box 16122 Collins Street West Victoria 8007 Australia'
+export const NAV_ITEMS = ['Home', 'About', 'Services', 'Portfolio', 'Contact Us'];

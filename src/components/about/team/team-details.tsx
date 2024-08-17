@@ -10,8 +10,16 @@ export const TeamDetails = () => {
                 sx={{
                     display: 'flex',           // Enable flexbox
                     textAlign: 'center',
-                    marginLeft: 50,
-                    marginRight: 50,
+                    marginLeft: {
+                        xs: 5,
+                        md: 10,
+                        lg: 50
+                    },
+                    marginRight: {
+                        xs: 5,
+                        md: 10,
+                        lg: 50
+                    },
                 }}
             >
                 <Typography
@@ -23,7 +31,7 @@ export const TeamDetails = () => {
                             marginTop: 5,
                             fontSize: {
                                 xs: 10,
-                                lg: 15
+                                md: 15
                             },
                             color: '#746a6a'
                         }} 

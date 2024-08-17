@@ -19,7 +19,9 @@ export const Speacilization = () => {
 					marginTop={3}
 					fontSize={{
 						xs: 'small',
-						sm: 35,
+						sm: 20,
+						md: 25,
+						lg: 30
 					}}
 				>
 					<span className="underline-word">Expertise</span> - What we can offer you

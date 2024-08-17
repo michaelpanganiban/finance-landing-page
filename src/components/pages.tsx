@@ -8,7 +8,7 @@ import { AboutUs } from './about/pages'
 import React, { useState } from 'react';
 import { AboutOverview } from './about/overview/pages'
 import { OurTeam } from './about/team/page'
-import { Speacilization } from './about/specialization/page'
+import { Speacilization } from './about/specialization/pages'
 
 
 export const DefaultComponents = () => {

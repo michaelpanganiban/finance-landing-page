@@ -6,6 +6,7 @@ import ThemeRegistry from '../components/theme/ThemeRegistry'
 import Header from '../components/header/page'
 import NavBar from '../components/navigation/page'
 import { DefaultComponents } from '../components/pages';
+import { Footer } from '../components/footer/pages'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
@@ -30,6 +31,7 @@ export default function RootLayout ({
           <Header />
           <NavBar />
           <DefaultComponents />
+          <Footer />
         </body>
       </ThemeRegistry>
     </html>
