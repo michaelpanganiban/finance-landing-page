@@ -10,25 +10,15 @@ interface ClientProps {
 }
 
 export const ClientList: React.FC<ClientProps> = ({ images }) => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+    const scrollRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: string) => {
-    if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -300 : 300;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
-    useEffect(() => {
-        const scrollContainer = scrollRef.current;
-        if (scrollContainer) {
-        const scrollInterval = setInterval(() => {
-            scrollContainer.scrollLeft += 1; // Adjust this value for scroll speed
-        }, 20); // Adjust this value for scroll speed
-
-        return () => clearInterval(scrollInterval); // Clean up on component unmount
+    const scroll = (direction: string) => {
+        if (scrollRef.current) {
+        const scrollAmount = direction === 'left' ? -300 : 300;
+        scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
-    }, []);
+    };
+
 
   return (
     <Box 
