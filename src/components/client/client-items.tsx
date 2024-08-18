@@ -1,5 +1,4 @@
-import { Box, Grid, IconButton, ImageListItem, ImageListItemBar, Typography } from '@mui/material';
-import InfoIcon from '@mui/icons-material/Info';
+import { Box, ImageListItem } from '@mui/material';
 import { ClientInterface } from './type';
 
 interface ClientItemProps {
