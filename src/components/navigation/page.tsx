@@ -19,9 +19,17 @@ interface IProps {
 
 export const NavBar:React.FC<IProps> = ({setViewComponents}) => {
 	const [mobileOpen, setMobileOpen] = useState(false);
+  const [isClicked, setIsClicked] = useState('');
+
 	const handleDrawerToggle = () => {
 		setMobileOpen((prevState) => !prevState);
 	};
+
+  const handleClick = (id: string) => {
+    setIsClicked(id);
+    setViewComponents('/')
+  };
+
 
   const NavBar = styled(AppBar, {
     name: 'NavBarComponent',
@@ -61,12 +69,13 @@ export const NavBar:React.FC<IProps> = ({setViewComponents}) => {
                   {NAV_ITEMS.map((item) => (
                     <Button key={item.id} 
                       sx={{ 
-                        color: COLORS.BLACK,
+                        color: isClicked === item.id ? COLORS.SECONDARY : COLORS.BLACK,
+                        fontWeight: isClicked === item.id ? 'bold' : 'initial',
                         '&:hover': { color: COLORS.SECONDARY, fontWeight: 'bold' },
                       }}  
                       component='a'
                       href={`${item.id}`}
-                      onClick={() => setViewComponents('/')}
+                      onClick={() => handleClick(item.id)}
                       >
                       {item.name}
                     </Button>
@@ -95,6 +104,7 @@ export const NavBar:React.FC<IProps> = ({setViewComponents}) => {
         mobileOpen={mobileOpen} 
         handleDrawerToggle={handleDrawerToggle}
         navItems={NAV_ITEMS}
+        setViewComponents={setViewComponents}
       />
     </Stack>
   );

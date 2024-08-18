@@ -77,6 +77,8 @@ export const AboutUsList:React.FC<AboutUsInterface> = ({setViewComponents}) => {
                                         aria-label={`info about ${item.imageName}`}
                                         title= {item.imageName}
                                         onClick={() => setViewComponents(item.redirect)}
+                                        component='a'
+                                        href={`#${item.redirect}`}
                                     >
                                         <UnfoldMore />
                                     </IconButton>

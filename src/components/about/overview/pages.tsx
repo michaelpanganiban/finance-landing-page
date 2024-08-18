@@ -9,8 +9,14 @@ export const AboutOverview = () => {
     return (
 		<>
 			<Stack sx={{
-					backgroundColor: COLORS.BACKGROUND
+					backgroundColor: COLORS.BACKGROUND,
+					scrollMarginTop: {
+						xs: 230,
+						md: 170,
+						lg: 145
+					}
 				}}
+				id='overview'
 				minHeight={100}
 			>
 				<Typography 
