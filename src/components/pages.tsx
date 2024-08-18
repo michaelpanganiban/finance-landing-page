@@ -11,6 +11,7 @@ import { OurTeam } from './about/team/page'
 import { Speacilization } from './about/specialization/pages'
 import { Clients } from './client/pages'
 import { NavBar } from './navigation/page'
+import { Footer } from './footer/pages'
 
 
 export const DefaultComponents = () => {
@@ -45,6 +46,7 @@ export const DefaultComponents = () => {
                     <Speacilization />
                 </>
             )}
+            <Footer setViewComponents={setViewComponents} />
         </>
     )
 }
