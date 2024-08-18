@@ -9,12 +9,17 @@ import React, { useState } from 'react';
 import { AboutOverview } from './about/overview/pages'
 import { OurTeam } from './about/team/page'
 import { Speacilization } from './about/specialization/pages'
+import { Clients } from './client/pages'
+import { NavBar } from './navigation/page'
 
 
 export const DefaultComponents = () => {
     const [viewComponents, setViewComponents] = useState('/'); 
     return (
         <>
+            <NavBar 
+                setViewComponents = { setViewComponents }
+            />
             { viewComponents === '/' && (
                 <>
                     <Home />
@@ -22,6 +27,7 @@ export const DefaultComponents = () => {
                     <Projects />
                     <ContactUs />
                     <AboutUs setViewComponents = { setViewComponents }/>
+                    <Clients />
                 </>
             )}
             { viewComponents === 'overview' && (

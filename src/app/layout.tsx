@@ -4,7 +4,6 @@ import React from 'react'
 import { Stack } from '@mui/material'
 import ThemeRegistry from '../components/theme/ThemeRegistry'
 import Header from '../components/header/page'
-import NavBar from '../components/navigation/page'
 import { DefaultComponents } from '../components/pages';
 import { Footer } from '../components/footer/pages'
 
@@ -25,13 +24,14 @@ export default function RootLayout ({
     <html lang="en">
       <ThemeRegistry>
         <body>
-          <Stack>
-            {children}
+          <Stack sx={{ minHeight: '5vh' }}>
+            <Stack>
+              {children}
+            </Stack>
+            <Header />
+            <DefaultComponents />
+            <Footer />
           </Stack>
-          <Header />
-          <NavBar />
-          <DefaultComponents />
-          <Footer />
         </body>
       </ThemeRegistry>
     </html>

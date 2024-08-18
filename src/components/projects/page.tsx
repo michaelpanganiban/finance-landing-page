@@ -8,9 +8,15 @@ import { PROJECTS } from '@/src/enum/projects';
 export const Projects = () => {
 	return (
 		<Stack sx={{
-			backgroundColor: COLORS.BACKGROUND
-		}}
-		minHeight={500}
+				backgroundColor: COLORS.BACKGROUND,
+				scrollMarginTop: {
+					xs: 240,
+					md: 180,
+					lg: 145
+				},
+			}}
+			minHeight={500}
+			id='portfolio'
 		>
 			<Typography 
 				fontFamily={'sans-serif'}

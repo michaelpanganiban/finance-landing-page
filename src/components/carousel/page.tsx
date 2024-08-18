@@ -21,7 +21,15 @@ export const Home = () => {
     includeContent: true
   }
   return (
-    <Stack>
+    <Stack id="home"
+      sx={{
+        scrollMarginTop: {
+          xs: 240,
+          md: 180,
+          lg: 145
+        }
+      }}
+    >
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}

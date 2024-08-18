@@ -5,7 +5,15 @@ import ServicesList from './services-list'
 
 export const Services = () => {
 	return (
-		<Stack minHeight={400}>
+		<Stack minHeight={400} id='services'
+			sx={{
+				scrollMarginTop: {
+					xs: 220,
+					md: 180,
+					lg: 145
+				}
+			}}
+		>
 			<Typography 
 				fontFamily={'sans-serif'}
 				variant='h4'
