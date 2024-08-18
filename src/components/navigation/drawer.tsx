@@ -2,7 +2,7 @@
 
 import { DRAWER_WIDTH } from '@/src/enum/constants';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemText, Stack } from '@mui/material';
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 
 interface NavigationInterface {
 	name: string,
@@ -13,6 +13,7 @@ interface Props {
 	mobileOpen: boolean,
 	handleDrawerToggle: () => void,
 	navItems: NavigationInterface [],
+	setViewComponents: Dispatch<SetStateAction<string>>
 }
 	
 export const NavDrawer = (props: Props) => {
@@ -29,7 +30,7 @@ export const NavDrawer = (props: Props) => {
 				{props.navItems.map((navItem) => (
 					<Stack key={navItem.id}>
 						<ListItem disablePadding>
-							<ListItemButton sx={{ textAlign: 'center' }} component='a' href={`${navItem.id}`}>
+							<ListItemButton sx={{ textAlign: 'center' }} component='a' href={`${navItem.id}`} onClick={() => props.setViewComponents('/')}>
 								<ListItemText primary={navItem.name}/>
 							</ListItemButton>
 						</ListItem>

@@ -8,9 +8,15 @@ export const Speacilization = () => {
     return (
         <Stack>
 			<Stack sx={{
-				backgroundColor: COLORS.BACKGROUND
+				backgroundColor: COLORS.BACKGROUND,
+					scrollMarginTop: {
+						xs: 230,
+						md: 170,
+						lg: 145
+					}
 				}}
 				minHeight={100}
+				id='specializations'
 			>
 				<Typography 
 					fontFamily={'sans-serif'}
