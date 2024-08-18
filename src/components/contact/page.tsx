@@ -8,9 +8,15 @@ export const ContactUs = () => {
     return (
 		<Stack 
             sx={{
-                backgroundColor: COLORS.DARK
+                backgroundColor: COLORS.DARK,
+                scrollMarginTop: {
+					xs: 230,
+					md: 180,
+					lg: 145
+				}
             }}
             minHeight={250}
+            id='contact-us'
 		>
 			<Grid 
                 container

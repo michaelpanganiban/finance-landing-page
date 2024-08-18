@@ -12,9 +12,15 @@ interface AboutUsInterface {
 export const AboutUs:React.FC<AboutUsInterface> = ({setViewComponents}) => {
     return (
 		<Stack sx={{
-			backgroundColor: COLORS.WHITE
-		}}
-		minHeight={500}
+				backgroundColor: COLORS.WHITE,
+				scrollMarginTop: {
+					xs: 230,
+					md: 170,
+					lg: 145
+				}
+			}}
+			minHeight={500}
+			id="about"
 		>
 			<Typography 
 				fontFamily={'sans-serif'}

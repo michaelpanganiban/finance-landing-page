@@ -10,10 +10,14 @@ import Button from '@mui/material/Button';
 import { NavDrawer } from './drawer';
 import { Grid, Stack, styled } from '@mui/material';
 import { COLORS } from '@/src/enum/colors';
-import { useState } from 'react';
+import { Dispatch, SetStateAction, useState } from 'react';
 import { NAV_ITEMS } from '@/src/enum/constants';
 
-export default function NavBar () {
+interface IProps {
+  setViewComponents: Dispatch<SetStateAction<string>>;
+}
+
+export const NavBar:React.FC<IProps> = ({setViewComponents}) => {
 	const [mobileOpen, setMobileOpen] = useState(false);
 	const handleDrawerToggle = () => {
 		setMobileOpen((prevState) => !prevState);
@@ -25,7 +29,18 @@ export default function NavBar () {
   })({})
 
   return (
-    <Stack sx={{ display: 'flex' }}>
+    <Stack
+      sx={{
+        display: 'flex',
+        position: 'sticky',
+        top: {
+          xs: '134px',
+          md: '80px',
+          lg: '48px'
+        }, // Sticks to the top of the viewport
+        zIndex: 999, // Ensures it's above other content (adjust as needed)
+      }}
+    >
       <CssBaseline />
       <NavBar>
         <Toolbar sx={{ height: '100px' }}>
@@ -36,7 +51,7 @@ export default function NavBar () {
                   component="img"
                   alt="Company logo"
                   src='logo.png'
-                  width={{ xs: '100%', sm: 'inherit' }}
+                  width={{ xs: '50%', sm: 'inherit' }}
                 />
               </Stack>
             </Grid>
@@ -44,13 +59,16 @@ export default function NavBar () {
               <Stack alignItems={{ xs: 'end', sm: 'center' }}>
                 <Stack sx={{ display: { xs: 'none', md: 'inline' } }}>
                   {NAV_ITEMS.map((item) => (
-                    <Button key={item} 
+                    <Button key={item.id} 
                       sx={{ 
                         color: COLORS.BLACK,
                         '&:hover': { color: COLORS.SECONDARY, fontWeight: 'bold' },
                       }}  
+                      component='a'
+                      href={`${item.id}`}
+                      onClick={() => setViewComponents('/')}
                       >
-                      {item}
+                      {item.name}
                     </Button>
                   ))}
                 </Stack>

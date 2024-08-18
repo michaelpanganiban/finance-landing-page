@@ -29,7 +29,10 @@ export const FooterBody = () => {
                             color: COLORS.SECONDARY,
                             cursor: 'pointer'
                         },
+                        textDecoration: 'none'
                     }}
+                    component='a'
+                    href={`${item.id}`}
                 >
                     <PlayArrow 
                         sx={{
@@ -43,7 +46,7 @@ export const FooterBody = () => {
                             },
                         }}
                     />
-                    { item }
+                    { item.name }
                 </Typography>
             </Box>
         )
