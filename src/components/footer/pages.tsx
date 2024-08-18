@@ -4,8 +4,13 @@ import { COLORS } from '@/src/enum/colors';
 import { Contacts } from './contacts';
 import { Divider, Stack, Typography } from '@mui/material';
 import { FooterBody } from './body';
+import React, { Dispatch, SetStateAction } from 'react';
 
-export const Footer = () => {
+interface FooterInterface {
+	setViewComponents: Dispatch<SetStateAction<string>>;
+}
+
+export const Footer:React.FC<FooterInterface> = ({setViewComponents}) => {
     return (
 		<Stack 
             sx={{
@@ -22,7 +27,7 @@ export const Footer = () => {
                     width: '90%',
                 }}
             />
-            <FooterBody />
+            <FooterBody setViewComponents={setViewComponents} />
             <Divider 
                 sx={{
                     bgcolor: '#686868',
@@ -36,7 +41,11 @@ export const Footer = () => {
                     fontSize: 13,
                     marginTop: 2,
                     textAlign: 'left',
-                    marginLeft: 15,
+                    marginLeft: {
+                        xs: 1,
+                        sm: 2,
+                        md: 15
+                    },
                     marginBottom: {
                         xs: 3,
                         md: 1

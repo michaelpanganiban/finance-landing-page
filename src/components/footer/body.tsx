@@ -4,8 +4,13 @@ import { COLORS } from '@/src/enum/colors';
 import { Box, Grid, Typography } from '@mui/material';
 import { NAV_ITEMS } from '@/src/enum/constants';
 import PlayArrow from '@mui/icons-material/PlayArrow';
+import React, { Dispatch, SetStateAction } from 'react';
 
-export const FooterBody = () => {
+interface FooterInterface {
+	setViewComponents: Dispatch<SetStateAction<string>>;
+}
+
+export const FooterBody:React.FC<FooterInterface> = ({setViewComponents}) => {
     const navItems = NAV_ITEMS.map((item, index) => {
         return (
             <Box 
@@ -33,6 +38,7 @@ export const FooterBody = () => {
                     }}
                     component='a'
                     href={`${item.id}`}
+                    onClick={() => setViewComponents('/')}
                 >
                     <PlayArrow 
                         sx={{

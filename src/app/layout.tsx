@@ -5,7 +5,6 @@ import { Stack } from '@mui/material'
 import ThemeRegistry from '../components/theme/ThemeRegistry'
 import Header from '../components/header/page'
 import { DefaultComponents } from '../components/pages';
-import { Footer } from '../components/footer/pages'
 
 export const metadata: Metadata = {
   title: 'Bookkeeping',
@@ -30,7 +29,6 @@ export default function RootLayout ({
             </Stack>
             <Header />
             <DefaultComponents />
-            <Footer />
           </Stack>
         </body>
       </ThemeRegistry>
